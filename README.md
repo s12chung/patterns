@@ -1,8 +1,8 @@
 # Patterns
 
-TODO: Write a gem description
+General styling patterns in SASS. Provides mix-ins for multiple elements for spacing, alignment,
 
-## Installation
+## Install for Rails 3.1+
 
 Add this line to your application's Gemfile:
 
@@ -12,18 +12,28 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+And in your .scss file:
 
-    $ gem install patterns
+    @import 'patterns';
+
+## Other
+
+Otherwise, clone the repo and copy app/assets/stylesheets where your stylesheet assets should be. And in your .scss file:
+
+    @import 'patterns';
 
 ## Usage
 
-TODO: Write usage instructions here
+See [http://patterns-examples.herokuapp.com/] for functions and variables.
 
-## Contributing
+# Credits
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Code inspired by the css class based version in [Placemarklist](https://www.placemarklist.com) and copied some gem scaffold from [bourbon](https://github.com/thoughtbot/bourbon). 
+
+Extracted out of [hockeystick](https://www.hockeystick.co/). Thanks to [Scalability Inc.](http://www.scalability.ca/) for giving me permission to open source this.
+
+Thanks to [Luke Zhang](https://github.com/lukezhangstudio) for doing the documentation website.
+
+# License
+MIT License
+

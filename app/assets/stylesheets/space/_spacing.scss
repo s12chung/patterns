@@ -23,7 +23,7 @@
   }
   @else {
     & > :first-child { margin-left: 0; }
-    & > * { @include left_spacer($n); }
+    & > * { margin-left: unit_multiplier($n); }
   }
 }
 @mixin vertical_spacer_container($n: 1, $bordered: false) {
@@ -33,6 +33,6 @@
   }
   @else {
     & > *:first-child { margin-top: 0; }
-    & > * { @include top_spacer($n); }
+    & > * { margin-top: unit_multiplier($n); }
   }
 }
