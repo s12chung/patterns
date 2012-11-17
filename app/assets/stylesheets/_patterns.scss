@@ -1,7 +1,10 @@
-@import 'space/alignment';
-@import 'space/borders';
-@import 'space/positioning';
-@import 'space/spacing';
+@import 'helpers/clearfix';
+
+@import 'alignment/center';
+@import 'alignment/float';
+@import 'alignment/lines';
+@import 'alignment/overflow';
+@import 'alignment/spacing';
 
 @import 'widgets/clean_list';
 @import 'widgets/scroll';

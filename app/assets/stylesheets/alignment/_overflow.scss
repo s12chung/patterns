@@ -1,0 +1,10 @@
+@mixin overflow_left_container {
+  @include clearfix;
+  & > :first-child { float: right; }
+  & > * { overflow: hidden; }
+}
+@mixin overflow_right_container {
+  @include clearfix;
+  & > :first-child { float: left; }
+  & > * { overflow: hidden;  }
+}

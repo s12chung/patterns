@@ -1,0 +1,9 @@
+@mixin float_left_container {
+  @include clearfix;
+  & > * { float: left; }
+}
+@mixin float_left_right_container {
+  @include clearfix;
+  & > :first-child { float: left; }
+  & > * { float: right; }
+}
