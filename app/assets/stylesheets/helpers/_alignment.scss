@@ -1,0 +1,29 @@
+@mixin center {
+  text-align: center;
+  margin: 0px auto;
+}
+@mixin center_container {
+  text-align: center;
+  & > * {
+    margin: 0px auto;
+  }
+}
+/*
+http://css-tricks.com/centering-in-the-unknown/
+Changes the parent
+*/
+@mixin center_container_unknown {
+  text-align: center;
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

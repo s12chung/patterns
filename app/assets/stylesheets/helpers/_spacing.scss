@@ -1,0 +1,38 @@
+@function unit_multiplier($n, $base: $unit_base) {
+  @if unitless($n) {
+    @return $n * $base;
+  }
+  @else {
+    @return $n;
+  }
+}
+
+@mixin horizontally_spaced($n: 1) {
+  &:first-child { margin-left: 0; }
+  & { margin-left: unit_multiplier($n); }
+}
+@mixin vertically_spaced($n: 1) {
+  &:first-child { margin-top: 0; }
+  & { margin-top: unit_multiplier($n);  }
+}
+
+@mixin horizontal_spacer_container($n: 1, $bordered: false) {
+  @if $bordered {
+    & > :first-child { margin-left: 0; padding-left: 0; }
+    & > * { margin-left: unit_multiplier($n, 2.5px); padding-left: unit_multiplier($n, 2.5px); }
+  }
+  @else {
+    & > :first-child { margin-left: 0; }
+    & > * { @include left_spacer($n); }
+  }
+}
+@mixin vertical_spacer_container($n: 1, $bordered: false) {
+  @if $bordered {
+    & > :first-child { margin-top: 0; padding-top: 0; }
+    & > * { margin-top: unit_multiplier($n, 2.5px); padding-top: unit_multiplier($n, 2.5px); }
+  }
+  @else {
+    & > *:first-child { margin-top: 0; }
+    & > * { @include top_spacer($n); }
+  }
+}

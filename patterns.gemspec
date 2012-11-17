@@ -7,13 +7,17 @@ Gem::Specification.new do |gem|
   gem.name          = "patterns"
   gem.version       = Patterns::VERSION
   gem.authors       = ["s12chung"]
-  gem.email         = ["steve.chung7@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.email         = ["steve@placemarklist.com"]
+  gem.description   = %q{General styling patterns in SASS}
+  gem.summary       = %q{General styling patterns in SASS for any project.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_dependency('sass', '>= 3.2')
+
+  gem.add_development_dependency('rake')
 end
