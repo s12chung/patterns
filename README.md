@@ -27,7 +27,7 @@ See http://patterns-examples.herokuapp.com for functions and variables.
 Tested on Chrome 23, Firefox 16 and IE8.
 
 ## Credits
-Extracted out of [hockeystick](https://www.hockeystick.co/). Thanks to [Scalability Inc.](http://www.scalability.ca/) for giving me permission to open source this.
+Extracted out of [Hockeystick](https://www.hockeystick.co/). Thanks to [Scalability Inc.](http://www.scalability.ca/) for giving me permission to open source this.
 
 Code inspired by the css class based version in [Placemarklist](https://www.placemarklist.com) and copied gem scaffold from [bourbon](https://github.com/thoughtbot/bourbon). 
 
