@@ -18,7 +18,7 @@ And in your .scss file:
 ### Other
 Otherwise, clone the repo and copy app/assets/stylesheets where your SASS assets should be. And in your .scss file:
 
-    @import 'some/relative/directories/patterns';
+    @import 'some-relative-directories/patterns';
 
 ## Use
 See http://patterns-examples.herokuapp.com for functions and variables.
