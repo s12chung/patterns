@@ -1,0 +1,9 @@
+// from http://css-tricks.com/perfect-full-page-background-image/
+// should use http://stackoverflow.com/questions/1342994/check-browser-css-property-support to degrade
+@mixin image_background($image_url) {
+  background: $image_url no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
