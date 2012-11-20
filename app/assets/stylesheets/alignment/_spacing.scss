@@ -1,5 +1,7 @@
 @import 'float';
 
+$unit_base: 5px;
+
 @function unit_multiplier($n, $base: $unit_base) {
   @if unitless($n) {
     @return $n * $base;

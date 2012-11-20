@@ -1,3 +1,5 @@
+$line_color: #DDD;
+
 @mixin vertical_line_container($line_color: $line_color) {
   & > :first-child { border-left: none; }
   & > * { border-left: 1px solid $line_color; }
