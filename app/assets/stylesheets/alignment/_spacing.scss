@@ -1,3 +1,5 @@
+@import 'float';
+
 @function unit_multiplier($n, $base: $unit_base) {
   @if unitless($n) {
     @return $n * $base;
@@ -9,27 +11,32 @@
 
 @mixin horizontally_spaced($n: 1) {
   &:first-child { margin-left: 0; }
-  & { margin-left: unit_multiplier($n); }
+  & {
+    float: left;
+    margin-left: unit_multiplier($n);
+  }
 }
 @mixin vertically_spaced($n: 1) {
   &:first-child { margin-top: 0; }
   & { margin-top: unit_multiplier($n);  }
 }
 
-@mixin horizontal_spacer_container($n: 1, $bordered: false) {
-  @if $bordered {
+@mixin horizontal_spacer_container($n: 1, $borders: false) {
+  @include float_left_container;
+
+  @if $borders {
     & > :first-child { margin-left: 0; padding-left: 0; }
-    & > * { margin-left: unit_multiplier($n, 2.5px); padding-left: unit_multiplier($n, 2.5px); }
+    & > * { margin-left: unit_multiplier($n, $unit_base/2); padding-left: unit_multiplier($n, $unit_base/2); }
   }
   @else {
     & > :first-child { margin-left: 0; }
     & > * { margin-left: unit_multiplier($n); }
   }
 }
-@mixin vertical_spacer_container($n: 1, $bordered: false) {
-  @if $bordered {
+@mixin vertical_spacer_container($n: 1, $borders: false) {
+  @if $borders {
     & > :first-child { margin-top: 0; padding-top: 0; }
-    & > * { margin-top: unit_multiplier($n, 2.5px); padding-top: unit_multiplier($n, 2.5px); }
+    & > * { margin-top: unit_multiplier($n, $unit_base/2); padding-top: unit_multiplier($n, $unit_base/2); }
   }
   @else {
     & > *:first-child { margin-top: 0; }
