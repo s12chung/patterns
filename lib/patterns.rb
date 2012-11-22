@@ -2,8 +2,8 @@
 
 module Patterns
   if defined?(Rails) && defined?(Rails::Engine)
-    class Engine < ::Rails::Engine
-      require 'patterns/engine'
+    class Engine < Rails::Engine
+      # auto wire
     end
   end
 end
