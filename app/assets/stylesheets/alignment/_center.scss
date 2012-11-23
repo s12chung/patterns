@@ -1,12 +1,5 @@
 @mixin center {
-  text-align: center;
   margin: 0px auto;
-}
-@mixin center_container {
-  text-align: center;
-  & > * {
-    margin: 0px auto;
-  }
 }
 /*
 http://css-tricks.com/centering-in-the-unknown/
