@@ -2,8 +2,10 @@
   margin: 0px auto;
 }
 @mixin center_container {
+  text-align: center;
   & > * {
     margin: 0px auto;
+    text-align: left;
   }
 }
 /*
