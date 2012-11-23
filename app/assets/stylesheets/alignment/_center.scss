@@ -1,6 +1,11 @@
 @mixin center {
   margin: 0px auto;
 }
+@mixin center_container {
+  & > * {
+    margin: 0px auto;
+  }
+}
 /*
 http://css-tricks.com/centering-in-the-unknown/
 Changes the parent
