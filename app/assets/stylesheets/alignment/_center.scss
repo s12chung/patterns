@@ -8,6 +8,19 @@
     text-align: left;
   }
 }
+
+// http://www.jakpsatweb.cz/css/css-vertical-center-solution.html
+@mixin vertical_center_container {
+  display: table;
+  position: static;
+
+  & > * {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
+
 /*
 http://css-tricks.com/centering-in-the-unknown/
 Changes the parent
