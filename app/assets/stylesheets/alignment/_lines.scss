@@ -1,10 +1,10 @@
 $line_color: #DDD;
 
-@mixin vertical_line_container($line_color: $line_color) {
+@mixin vertical_line_container($line_color: $line_color, $border_width: 1px) {
   & > :first-child { border-left: none; }
-  & > * { border-left: 1px solid $line_color; }
+  & > * { border-left: $border_width solid $line_color; }
 }
-@mixin hortizonal_line_container($line_color: $line_color) {
+@mixin hortizonal_line_container($line_color: $line_color, $border_width: 1px) {
   & > :first-child { border-top: none; }
-  & > * { border-top: 1px solid $line_color; }
+  & > * { border-top: $border_width solid $line_color; }
 }
