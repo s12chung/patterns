@@ -4,6 +4,11 @@
 }
 @mixin float_left_right_container {
   @include clearfix;
-  & > :first-child { float: left; }
-  & > * { float: right; }
+  & > :first-child {
+    float: left;
+
+    & + * {
+      float: right;
+    }
+  }
 }
