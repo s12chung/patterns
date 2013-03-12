@@ -1,16 +1,13 @@
-@mixin horizontally_center {
-  margin: 0px auto;
-}
-@mixin horizontal_center_container {
+@mixin center_container_horizontal {
   text-align: center;
   & > * {
-    margin: 0px auto;
+    display: inline-block;
     text-align: left;
   }
 }
 
 // http://www.jakpsatweb.cz/css/css-vertical-center-solution.html
-@mixin vertical_center_container {
+@mixin center_container_vertical {
   display: table;
   position: static;
 
