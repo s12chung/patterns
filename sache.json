@@ -1,0 +1,5 @@
+{
+    "name": "patterns",
+    "description": "General styling patterns in SASS. Provides utility mixins for spacing, alignment and cleanup.",
+    "tags": ["utility", "starter", "abstraction", "patterns"]
+}
